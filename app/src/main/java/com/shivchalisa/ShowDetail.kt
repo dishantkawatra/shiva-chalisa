@@ -19,6 +19,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.graphics.toColorInt
+import com.shivchalisa.presentation.AppTheme
 
 class ShowDetail : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,23 +44,27 @@ class ShowDetail : ComponentActivity() {
 
     @Composable
     private fun ShowShivDetail(data: String) {
-        Column() {
-            Text(
-                text = data,
+        AppTheme(isSystemInDarkTheme()) {
+            Column() {
+                Text(
+                    text = data,
+                    style = TextStyle(color = MaterialTheme.colors.onPrimary),
+                    fontSize = 16.sp,
+                    textAlign = TextAlign.Center,
+                    modifier = Modifier
+                        .verticalScroll(rememberScrollState(), true)
+                        .fillMaxWidth()
+                        .padding(10.dp)
+                        .border(1.dp, Color("#338BA8".toColorInt()))
+                        .padding(12.dp)
+                        .fillMaxHeight()
 
-                fontSize = 16.sp,
-                textAlign = TextAlign.Center,
-                modifier = Modifier
-                    .verticalScroll(rememberScrollState(),true)
-                    .fillMaxWidth()
-                    .padding(10.dp)
-                    .border(1.dp, Color("#338BA8".toColorInt()))
-                    .padding(12.dp)
-                    .fillMaxHeight()
+                )
+            }
+        }
 
-            )
-        }
-        }
+
+    }
 
 
 
