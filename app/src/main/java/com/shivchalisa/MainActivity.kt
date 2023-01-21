@@ -1,5 +1,4 @@
 package com.shivchalisa
-
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -28,6 +27,8 @@ import androidx.compose.ui.unit.sp
 import androidx.core.graphics.toColorInt
 import com.shivchalisa.model.EmployDetails
 import com.shivchalisa.model.ModelDataClass
+import com.shivkichalisa.R
+
 
 
 class MainActivity : ComponentActivity() {

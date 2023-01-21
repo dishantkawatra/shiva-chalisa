@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace 'com.shivchalisa'
+    namespace 'com.shivkichalisa'
     compileSdk 33
 
     buildFeatures {
@@ -12,10 +12,10 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.shivchalisa"
+        applicationId "com.shivkichalisa"
         minSdk 21
         targetSdk 33
-        versionCode 1
+        versionCode 3
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"

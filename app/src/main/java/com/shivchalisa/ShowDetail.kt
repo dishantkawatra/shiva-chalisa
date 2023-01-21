@@ -1,5 +1,4 @@
 package com.shivchalisa
-
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -12,7 +11,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -20,6 +18,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.graphics.toColorInt
 import com.shivchalisa.presentation.AppTheme
+import com.shivkichalisa.R
 
 class ShowDetail : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,8 +32,10 @@ class ShowDetail : ComponentActivity() {
                 intent.getStringExtra(getString(R.string.text_title))?.let {
                     ShowTopView(it)
                 }
-                ShowImage()
-                intent.getStringExtra(getString(R.string.text_desc))?.let {
+
+                intent.getStringExtra(getString(
+                    R
+                    .string.text_desc))?.let {
                     ShowShivDetail(it)
                 }
 
@@ -49,7 +50,7 @@ class ShowDetail : ComponentActivity() {
                 Text(
                     text = data,
                     style = TextStyle(color = MaterialTheme.colors.onPrimary),
-                    fontSize = 16.sp,
+                    fontSize = 18.sp,
                     textAlign = TextAlign.Center,
                     modifier = Modifier
                         .verticalScroll(rememberScrollState(), true)
