@@ -168,6 +168,79 @@ object ModelDataClass {
                     "जय शिव ओंकारा हर ॐ शिव ओंकारा|\n" +
                     "ब्रह्मा विष्णु सदाशिव अद्धांगी धारा॥ ॐ जय शिव ओंकारा…॥",
             ),
+
+
+        EmployDetails(
+            id = 6,
+            title = "सोमनाथ मंदिर आरती",
+            description = "Ho Someshwar dev bhodiya, karu tamari sev\n" +
+                    "Jataama vase maat gangev, pateet ne pavan karati\n" +
+                    "Paravati na pati, todale rame gun no pati\n" +
+                    "Jaap nit jape jati ne sati\n" +
+                    "Aarti roj utarti, ........\n\n" +
+                    "Kad tana cho kad, kanth ma zuli rahya kankal\n" +
+                    "Ang par rame vikhandhar vyad, manidhar maniyal kada\n" +
+                    "Garal dharal nilakanth dhatura, Bhang tript aa kanth\n" +
+                    "Nishachar bhoot pret na chant, Bhayankar bhuril kada\n" +
+                    "Aarti roj utarti, ........\n\n" +
+                    "Nirmal jal ni dhar, dhare koi bilipatra upahaar\n" +
+                    "Shivay om Namahh kare ucchar, dhayn shankar no dhare\n" +
+                    "Dharm arth ne kaam moksh, shah charu fal ne shaam\n" +
+                    "Shada shiv haam daam ne thaam, samarpe sevak dware\n" +
+                    "Aarti roj utarti, ........\n" +
+                    "Sthan bhumi shmashan, durjati dhare alkharo dhyan\n" +
+                    "Digambar mahadev bhagwan, ajan ma akad anupam\n" +
+                    "Dev daitya ne naag manvi, koina pame taad\n" +
+                    "Ajarvar tara gunalay thay, samarpe shambhu dam dam\n" +
+                    "Aarti roj utarti, ........\n\n" +
+                    "Jata jut me chandra, trilochan agan jaad par chant\n" +
+                    "Trishul par damaru daak bajant, vaas kailash nivasi\n" +
+                    "Bhav har bhavra nath sadhara, sath vada samrat\n" +
+                    "Adhau har anaath handa nath, taad tal bhavri faasi\n" +
+                    "Aarti roj utarti, ........\n\n" +
+                    "Chale chaud hi lok, pukarat nam mite sab shok\n" +
+                    "Charit banchay jagat re chok, ke jai ho pinak pani\n" +
+                    "Algari ucharang dhari gun gaay kari man chant\n" +
+                    "Rakhie nath triloki rang, vadat neet vimal vaani\n" +
+                    "Aarti roj utarti, ........\n\n\n" +
+                    "Om Namah Shivaay!"
+
+        ),
+
+        EmployDetails(
+            id = 7,
+            title = "केदारनाथ आरती",
+            description = "जय केदार उदार शंकर, मन भयंकर दुख हरम्,\n" +
+                    "\n" +
+                    "गौरी गणपति स्कंद नंदी, श्री केदार नमाम्यहम्।\n" +
+                    "\n" +
+                    "शैली सुंदर अति हिमालय, शुभ मंदिर सुंदरम्,\n" +
+                    "\n" +
+                    "निकट मंदाकिनी सरस्वती जय केदार नमाम्यहम्।\n" +
+                    "\n" +
+                    "उदक कुंड है अधम पावन रेतस कुंज मनोहरम्,\n" +
+                    "\n" +
+                    "हंस कुंड समीप सुंदर जै केदार नमाम्यहम्।\n" +
+                    "\n" +
+                    "अन्नपूर्णा सहं अर्पणा काल भैरव शोभितम्,\n" +
+                    "\n" +
+                    "पंच पांडव द्रोपदी सम जै केदार नमाम्यहम्।\n" +
+                    "\n" +
+                    "शिव दिगंबर भस्मधारी अर्द्धचंद्र विभुषितम्\n" +
+                    "\n" +
+                    "शीश गंगा कंठ फणिपति जै केदार नमाम्यहम्।\n" +
+                    "\n" +
+                    "कर त्रिशूल विशाल डमरू ज्ञान गान विशारद्\u200D,\n" +
+                    "\n" +
+                    "मदमहेश्वर तुंग ईश्वर रूद्र कल्प गान महेश्वरम्।\n" +
+                    "\n" +
+                    "पंच धन्य विशाल आलय जै केदार नमाम्यहम्,\n" +
+                    "\n" +
+                    "नाथ पावन है विशालम् पुण्यप्रद हर दर्शनम्,\n" +
+                    "\n" +
+                    "जय केदार उदार शंकर पाप ताप नमाम्यहम्।"
+
+        ),
         EmployDetails(
             id = 3,
             title = "शिव मूल मंत्र",
@@ -251,7 +324,91 @@ object ModelDataClass {
             "आश्रम में रानी को देख दूतों ने राजा को बताया। तब राजा ने वहां जाकर गुसांईजी से कहा- महाराज! यह मेरी पत्नी है। मैंने इसका परित्याग कर दिया था। कृपया इसे मेरे साथ जाने की आज्ञा दें। शिवजी की कृपा से प्रतिवर्ष 16 सोमवार का व्रत करते हुए वे आनंद से रहने लगे और अंत में शिवलोक को प्राप्त हुए।\n" +
             " ",
 
-    )
+    ),
+
+
+
+        EmployDetails(
+            id = 6,
+            title = "श्री महाकाल आरती",
+            description = "श्री राजाधिराज महाराज अखिलकोटी  ब्रह्माण्ड के नायक \n" +
+                    "देवो के देव महादेव  कैलाश पति कालो के काल महाँकाल \n" +
+                    "केवडैश्वर की जय \n" +
+
+                    "\n" +
+                    "ओम केवडैश्वर महाँकाल \n" +
+                    "स्वामी जय शिव जय महाँकाल \n" +
+                    "ज्योर्तिलिंग स्वरूपम  ज्योर्तिलिंग स्वरूपम\n" +
+                    "तुम कालो के काल \n" +
+                    "ओम केवडैश्वर महाँकाल\n" +
+                    "मंगल मयी तेरा द्वारा \n" +
+                    "परम सिद्ध दरबार \n" +
+                    "भोले परम सिद्ध दरबार \n" +
+                    "केवड  केवल अजन्म \n" +
+                    "केवल केवड  अजन्म \n" +
+                    "विश्वरूप अवतार \n" +
+                    "ओम केवडैश्वर महाँकाल \n" +
+                    "\n" +
+                    "संग  विराजे गोरा चौखट  श्री गणनाथ     \n" +
+                    "भोले चौखट  श्री गणनाथ \n" +
+                    "सनमुख द्वार विराजे  \n" +
+                    "सनमुख द्वार विराजे श्री नन्दी जी  महाराज \n" +
+                    "ओम केवडैश्वर महाँकाल\n" +
+                    "\n" +
+                    "मूर्ति  स्वरूप तेम त्रेता \n" +
+                    "कामधेनु पावा \n" +
+                    "भोले कामधेनु पावा \n" +
+                    "चहेरे रूपमे हनुमंत चहेरे रूपमे हनुमंत  \n" +
+                    "करते या हापर्व   \n" +
+                    "\n" +
+                    "दुधाधारी  गुरुवर  \n" +
+                    "तेरे भज तं राम  \n" +
+                    "जगत हो एघोनीचे \n" +
+                    "जगत हो एघोनीचे \n" +
+                    "केवडैश्वर भगवान \n" +
+                    "ओम केवडैश्वर महाँकाल\n" +
+                    "\n" +
+                    "परम सिद्धह तेरे द्वारा \n" +
+                    "रज कन कन पावन  \n" +
+                    "भोले रज कन कन पावन  \n" +
+                    "मंन शान्ति  सुख दाता \n" +
+                    "मंन शान्ति  सुख दाता\n" +
+                    "अनुपम मन पावन    \n" +
+                    "केवडैश्वर महाँकाल\n" +
+                    "\n" +
+                    "सम्यक पूरे  तुम्हारे \n" +
+                    "परम बहत्रा देवा   \n" +
+                    "भोले परम बहत्रा देवा \n" +
+                    "तेरे शरण मे रहकर \n" +
+                    "तेरे शरण मे रहकर\n" +
+                    "करिएज  तेन  सेवा     \n" +
+                    "ओम केवडैश्वर महाँकाल\n" +
+                    "करे हम आरती तेरी श्रीधर मेघपुरी  \n" +
+                    "भोले श्रीधर मेघपुरी      \n" +
+                    "वागत ढोल नगारा \n" +
+                    "गुँजत जय जय कारा\n" +
+                    "त्रिभुवन त्रिपुरारी  \n" +
+                    "ओम केवडैश्वर महाँकाल\n" +
+                    "\n" +
+                    "केवडैश्वर जी की आरती  सुने जो जन गावे  \n" +
+                    "भोले सुने जो जन गावे  \n" +
+                    "तहमव हेत स्वरूप   \n" +
+                    "तहमव हेत स्वरूप जो मांगे पावे  \n" +
+                    "ओम केवडैश्वर महाँकाल\n" +
+                    "ओम केवडैश्वर महाँकाल\n" +
+                    "ओम केवडैश्वर महाँकाल\n" +
+                    "\n" +
+                    "करपूर गौरम करूणावतारम\n" +
+                    "संसार सारम भुजगेन्द्र हारम |\n" +
+                    "सदा वसंतम हृदयारविंदे\n" +
+                    "भवम भवानी सहितं नमामि ||\n" +
+                    "भवम भवानी सहितं नमामि ||\n" +
+                    "भवम भवानी सहितं नमामि ||"
+
+            ),
+
+
+
 
     )
 

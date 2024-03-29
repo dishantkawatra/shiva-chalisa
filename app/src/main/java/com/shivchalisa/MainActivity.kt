@@ -40,9 +40,9 @@ class MainActivity : ComponentActivity() {
                     .fillMaxWidth()
                     .fillMaxHeight()
             ) {
-                ShowView()
-                ShowImage()
-                BarkHomeContent()
+                showView()
+                showImage()
+                ShowListItem()
 
             }
 
@@ -52,7 +52,7 @@ class MainActivity : ComponentActivity() {
 
 
     @Composable
-     fun ShowView() {
+     fun showView() {
         Text(
             text = stringResource(R.string.text_toolbar_title),
             color = Color("#FFFFFF".toColorInt()),
@@ -67,29 +67,33 @@ class MainActivity : ComponentActivity() {
     }
 
 
+
     @Composable
-    fun PuppyListItem(emp: EmployDetails) {
+    fun ListItemView(emp: EmployDetails) {
         Card(
-            elevation = 6.dp, backgroundColor = Color("#338BA8".toColorInt()), modifier = Modifier
-                .padding(10.dp)
-                .clickable { openNewData(emp.description,emp.title) }
+            elevation = 4.dp, backgroundColor = Color("#338BA6".toColorInt()), modifier = Modifier
+                .padding(1.5.dp)
+                .clickable { showDetails(emp.description,emp.title,emp.id) }
                 .fillMaxWidth()
-                .height(50.dp)
+                .height(45.dp)
         ) {
+
             Column(
                 verticalArrangement = Arrangement.Center,
-                horizontalAlignment = Alignment.CenterHorizontally
-            ) {
-                Text(text = emp.title, style = typography.h6, color = Color("#FFFFFF".toColorInt()))
+
+                horizontalAlignment = Alignment.CenterHorizontally)
+            {
+                Text(text = emp.title, modifier = Modifier.padding(start = 10.dp),
+                            textAlign = TextAlign.Center, style = typography.h6, color = Color("#FFFFFF".toColorInt()))
 
             }
         }
 
 
     }
-
+    @Preview
     @Composable
-    fun BarkHomeContent() {
+    fun ShowListItem() {
         val puppies = remember { ModelDataClass.EmployDetailsList }
         LazyColumn(
             contentPadding = PaddingValues(horizontal = 8.dp, vertical = 4.dp)
@@ -97,24 +101,25 @@ class MainActivity : ComponentActivity() {
             items(
                 items = puppies,
                 itemContent = {
-                    PuppyListItem(emp = it)
+                    ListItemView(emp = it)
                 })
         }
     }
 
 
-    private fun openNewData(description: String, title: String)
+    private fun showDetails(description: String, title: String, id: Int)
     {
         val i = Intent(this@MainActivity, ShowDetail::class.java)
         i.putExtra(getString(R.string.text_desc), description)
         i.putExtra(getString(R.string.text_title), title)
+        i.putExtra(getString(R.string.id), id)
         startActivity(i)
     }
 
 
     @Preview
     @Composable
-    private fun ShowImage() {
+    private fun showImage() {
         Image(
             painter = painterResource(R.drawable.shiv),
             contentDescription = "Shiv Image",
