@@ -24,7 +24,12 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.viewinterop.AndroidView
 import androidx.core.graphics.toColorInt
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdSize
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.MobileAds
 import com.shivchalisa.model.EmployDetails
 import com.shivchalisa.model.ModelDataClass
 import com.shivkichalisa.R
@@ -34,6 +39,7 @@ import com.shivkichalisa.R
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        MobileAds.initialize(this) {}
         setContent {
             Column(
                 modifier = Modifier
@@ -42,12 +48,34 @@ class MainActivity : ComponentActivity() {
             ) {
                 showView()
                 showImage()
+                AdmobBanner(modifier = Modifier.fillMaxWidth())
                 ShowListItem()
+
 
             }
 
         }
 
+    }
+    @Preview
+    @Composable
+    fun AdmobBanner(modifier: Modifier = Modifier) {
+        AndroidView(
+            modifier = Modifier.fillMaxWidth(),
+            factory = { context ->
+                // on below line specifying ad view.
+                AdView(context).apply {
+                    // on below line specifying ad size
+                    //adSize = AdSize.BANNER
+                    // on below line specifying ad unit id
+                    // currently added a test ad unit id.
+                    setAdSize(AdSize.BANNER)
+                    adUnitId = context.getString(R.string.ad_unit)
+                    // calling load ad to load our ad.
+                    loadAd(AdRequest.Builder().build())
+                }
+            }
+        )
     }
 
 
@@ -73,20 +101,40 @@ class MainActivity : ComponentActivity() {
         Card(
             elevation = 4.dp, backgroundColor = Color("#338BA6".toColorInt()), modifier = Modifier
                 .padding(1.5.dp)
-                .clickable { showDetails(emp.description,emp.title,emp.id) }
+                .clickable { showDetails(emp.description, emp.title, emp.id) }
                 .fillMaxWidth()
                 .height(45.dp)
         ) {
 
-            Column(
-                verticalArrangement = Arrangement.Center,
-
-                horizontalAlignment = Alignment.CenterHorizontally)
+            Column(verticalArrangement = Arrangement.Center)
             {
-                Text(text = emp.title, modifier = Modifier.padding(start = 10.dp),
-                            textAlign = TextAlign.Center, style = typography.h6, color = Color("#FFFFFF".toColorInt()))
+                Row(modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(end = 5.dp), horizontalArrangement = Arrangement.Absolute.SpaceBetween) {
+                    Text(text = emp.title, modifier = Modifier
+                        .padding(start = 10.dp)
+                        .align(Alignment.CenterVertically), textAlign = TextAlign.Center, style = typography.h6, color = Color("#FFFFFF".toColorInt()))
+                    if(emp.id==2)
+                    {
+                        Image(painter = painterResource(R.drawable.ic_audio),
+                            contentDescription = "Shiv Image",
+                            alignment = Alignment.CenterEnd,
+                            contentScale = ContentScale.Crop,
+
+                            modifier = Modifier
+                                .width(30.dp)
+                                .height(30.dp)
+                                .align(Alignment.CenterVertically)
+                                .padding(start = 0.dp, end = 0.dp, top = 0.dp, bottom = 0.dp)
+
+                        )
+                    }
+
+                }
 
             }
+
+
         }
 
 

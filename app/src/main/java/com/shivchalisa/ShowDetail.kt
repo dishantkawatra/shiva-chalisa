@@ -35,16 +35,13 @@ import androidx.compose.runtime.*
 class ShowDetail : ComponentActivity() {
     private lateinit var mp: MediaPlayer
     private var id: Int = 0
-    private val Chalisa: Int = 2
+    private val chalisa: Int = 2
     private var playPause: Boolean = false
     var isClicked by mutableStateOf(false)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            Column(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .fillMaxHeight()
+            Column(modifier = Modifier.fillMaxWidth().fillMaxHeight()
             ) {
                 intent.getIntExtra(getString(R.string.id), 0).let {
                     id = it
@@ -55,20 +52,27 @@ class ShowDetail : ComponentActivity() {
                 }
                 intent.getStringExtra(
                     getString(
-                        R
-                            .string.text_desc
+                        R.string.text_desc
                     )
                 )?.let {
                     ShowShivDetail(it)
                 }
-
-
-                if (id == Chalisa) {
-
-                    playSound()
-                }
+                checkIsAudio()
             }
         }
+    }
+
+
+    private fun checkIsAudio() {
+        if (id == chalisa) {
+            playSound()
+        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        isClicked=false
+        checkIsAudio()
     }
 
 
@@ -89,7 +93,6 @@ class ShowDetail : ComponentActivity() {
     private fun ShowShivDetail(data: String) {
         AppTheme(isSystemInDarkTheme()) {
             Column {
-
                 Box(
                     modifier = Modifier
                         .weight(2f)
@@ -112,7 +115,7 @@ class ShowDetail : ComponentActivity() {
                     )
                 }
 
-                if (id == Chalisa) {
+                if (id == chalisa) {
                     IconButton(onClick = {
 
                         if(mp.isPlaying)
